@@ -318,12 +318,12 @@ pub fn build_gl_aliases(ecx: &ExtCtxt) -> Vec<P<ast::Item>> {
         // Must be 32 bits
         quote_item!(ecx, pub type GLfixed = GLint;),
 
-        quote_item!(ecx, pub type GLintptr = super::__gl_imports::libc::ptrdiff_t;),
-        quote_item!(ecx, pub type GLsizeiptr = super::__gl_imports::libc::ptrdiff_t;),
+        quote_item!(ecx, pub type GLintptr = int;),
+        quote_item!(ecx, pub type GLsizeiptr = int;),
         quote_item!(ecx, pub type GLint64 = i64;),
         quote_item!(ecx, pub type GLuint64 = u64;),
-        quote_item!(ecx, pub type GLintptrARB = super::__gl_imports::libc::ptrdiff_t;),
-        quote_item!(ecx, pub type GLsizeiptrARB = super::__gl_imports::libc::ptrdiff_t;),
+        quote_item!(ecx, pub type GLintptrARB = int;),
+        quote_item!(ecx, pub type GLsizeiptrARB = int;),
         quote_item!(ecx, pub type GLint64EXT = i64;),
         quote_item!(ecx, pub type GLuint64EXT = u64;),
 
